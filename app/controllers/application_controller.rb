@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action:configure_permitted_parameters,if: :devise_controller?
 
   def after_sign_in_path_for(resource) #Deviseが用意しているメソッド、サインイン後にどこに偏移するかを設定
-    post_image_path
+    post_images_path
   end
 
   def after_sign_out_path_for(resource)#Deviseが用意しているメソッド、サインアウト後にどこに偏移するかを設定
